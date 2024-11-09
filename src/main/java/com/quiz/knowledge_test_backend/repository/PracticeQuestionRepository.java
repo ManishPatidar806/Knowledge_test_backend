@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface PracticeQuestionRepository extends JpaRepository<PracticeQuestion, Long> {
 
-    @Query(value = "SELECT * FROM practice_question WHERE type=:type ORDER BY RAND() LIMIT 4 ", nativeQuery = true)
+    @Query(value = "SELECT * FROM practice_question WHERE type=:type ORDER BY RAND() LIMIT 10 ", nativeQuery = true)
     List<PracticeQuestion> findPracticeQuestionBy(@Param("type") String type);
 
 

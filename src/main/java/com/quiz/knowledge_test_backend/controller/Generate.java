@@ -54,7 +54,7 @@ public class Generate {
                     PDPageContentStream contentStream = new PDPageContentStream(document, page, PDPageContentStream.AppendMode.APPEND, true, true);
                     PDFont font = PDType0Font.load(document, new File("src/main/resources/Fonts/Updock-Regular.ttf"));
                     contentStream.setFont(font, 47f);
-                    contentStream.setNonStrokingColor(0.8745f, 0.7490f, 0.2510f);
+                    contentStream.setNonStrokingColor(0.0f, 0.0f, 0.0f);
                     try {
                         contentStream.beginText();
                         contentStream.newLineAtOffset(365.669291339f, 330.031476063f); // x, y coordinates

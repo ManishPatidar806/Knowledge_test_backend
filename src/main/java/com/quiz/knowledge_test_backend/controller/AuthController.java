@@ -19,7 +19,7 @@ public class AuthController {
     AuthRepository authRepository;
 
 
-    @PostMapping("/signin")
+    @PostMapping("/signup")
     public ResponseEntity<AuthResponse> signin(@RequestBody User user) throws Exception {
 
         User isexist =authRepository.findByEmail(user.getEmail());

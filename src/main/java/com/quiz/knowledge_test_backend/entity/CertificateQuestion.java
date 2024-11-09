@@ -12,6 +12,7 @@ public class CertificateQuestion {
 
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(nullable = false)
     private  Long certificateQuestionId;
 
 @Column(nullable = false)
@@ -21,10 +22,17 @@ public class CertificateQuestion {
     @Column(nullable = false)
     private String type;
 
-    @ElementCollection
-    @CollectionTable(name = "certificateQuestionOption" , joinColumns = @JoinColumn(name = "certificateQuestionId"))
     @Column(nullable = false)
-   private List<String>options;
+    private  String optionA;
+
+    @Column(nullable = false)
+    private  String optionB;
+    @Column(nullable = false)
+    private  String optionC;
+    @Column(nullable = false)
+    private  String optionD;
+
+
 
 
 

@@ -11,6 +11,7 @@ public class PracticeQuestion {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(nullable = false)
 private  Long practiceQuestionId;
     @Column(nullable = false)
 private  String question;
@@ -20,10 +21,12 @@ private  String answer;
     private  String type;
 
 
-
-@ElementCollection
-    @CollectionTable(name = "practiceQuestionOptions",joinColumns = @JoinColumn(name = "practiceQuestionId"))
     @Column(nullable = false)
-    private List<String> options;
-
+    private  String optionA;
+    @Column(nullable = false)
+    private  String optionB;
+    @Column(nullable = false)
+    private  String optionC;
+    @Column(nullable = false)
+    private  String optionD;
 }

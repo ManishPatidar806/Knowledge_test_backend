@@ -16,7 +16,7 @@ public class AuthHelper {
     public final Key SECREAT_KEY = Keys.hmacShaKeyFor(SECRET_KEY_STRING.getBytes());
 
     public String generatToken(String username){
-        String token = Jwts.builder().setSubject(username).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis()+1000*60*30))
+        String token = Jwts.builder().setSubject(username).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis()+1000*60*60*60))
                 .signWith(SECREAT_KEY)
                 .compact();
         System.out.println("Generated Token is "+token);
